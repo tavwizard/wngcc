@@ -1,7 +1,7 @@
 export interface Package {
     name: string;
     version: string;
-    ngccProcessed: boolean;
+    ngccVersion?: string;
     path: string;
     filePath: string;
 }
