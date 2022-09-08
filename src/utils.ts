@@ -73,3 +73,11 @@ export function pool<T>(arrPromised: Task<T>[], count = 50): Promise<T[]> {
         }
     });
 }
+
+export function jsonParse(data: string): object {
+    try {
+        return JSON.parse(data);
+    } catch (e) {
+        return {};
+    }
+}

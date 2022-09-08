@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as glob from 'glob';
 import { readFile } from 'fs';
 import { Package } from './package';
-import { pool, Task } from './utils';
+import { jsonParse, pool, Task } from './utils';
 
 const readFile_p = promisify(readFile);
 
@@ -18,7 +18,7 @@ export async function loadPackages(files: string[]) {
     let packs = await pool(files.map<Task<Package>>((file) => {
         return async () => {
             const buffer = await readFile_p(file);
-            const pack = JSON.parse(buffer.toString());
+            const pack: any = jsonParse(buffer.toString());
             const ivyNgcc = pack['__processed_by_ivy_ngcc__'];
             return {
                 name: pack.name,

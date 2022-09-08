@@ -1,6 +1,6 @@
 {
   "name": "wngcc",
-  "version": "1.1.3",
+  "version": "1.2.1",
   "description": "Wrapper over the ngcc with cache",
   "bin": {
     "wngcc": "dist/main.js"
@@ -26,17 +26,17 @@
   },
   "homepage": "https://github.com/tavwizard/wngcc#readme",
   "dependencies": {
-    "glob": "^7.1.6",
+    "glob": "^8.0.3",
     "@alumna/reflect": "^1.0.5"
   },
   "peerDependencies": {
-    "tslib": "^1.10.0",
-    "@angular/compiler-cli": "^9.1.11",
-    "@angular/compiler": "^9.1.11"
+    "tslib": ">= 1.10.0",
+    "@angular/compiler-cli": ">= 9.1.11",
+    "@angular/compiler": ">= 9.1.11"
   },
   "devDependencies": {
     "@types/node": "^12.19.0",
-    "@types/glob": "^7.1.3",
+    "@types/glob": "^8.0.0",
     "typescript": "3.8.3",
     "@angular/compiler-cli": "9.1.11",
     "@angular/compiler": "9.1.11",
